@@ -1,0 +1,82 @@
+extends ./index.jade
+
+block content
+    .subhead
+        button.flat-btn.pull-left.subhead-back-button Назад
+        button.flat-btn.pull-right.subhead-edit-button Редактировать
+
+    .content-wrapper
+        .row
+            .col-md-12
+                .box
+                    .box-content.no-padding
+                        .box-head
+                            .text Я родился
+                        .journal
+                            .journal-info-edit-wrap
+                                .row
+                                    .col-xs-12
+                                        .file-upload
+                                            button Загрузить фото
+                                            div Файл не выбран
+                                            input(type="file")
+
+                                    .col-xs-12.col-sm-6
+                                        .form-group.common-form-group
+                                            label Время
+                                            .input-wrapper.input-wrapper-fluid
+                                                input.padded(type="text" placeholder="Введите время")
+
+                                    .col-xs-12.col-sm-6
+                                        .form-group.common-form-group
+                                            label Город
+                                            .input-wrapper.input-wrapper-fluid
+                                                input.padded(type="text" placeholder="Введите город")
+
+                                    .col-xs-12.col-sm-6
+                                        .form-group.common-form-group
+                                            label Мой вес
+                                            .input-wrapper.input-wrapper-fluid
+                                                input.padded(type="text" placeholder="Введите вес, кг")
+
+                                    .col-xs-12.col-sm-6
+                                        .form-group.common-form-group
+                                            label Мой рост
+                                            .input-wrapper.input-wrapper-fluid
+                                                input.padded(type="text" placeholder="Введите рост, см")
+
+                                    .col-xs-12.col-sm-6
+                                        .form-group.common-form-group.mb-xs-0
+                                            label Я похож на:
+
+                                    .col-xs-12.col-sm-6
+                                        .form-group.common-form-group
+                                            .row
+                                                .col-xs-6.usual-radio-block
+                                                    input(type="radio" value="female" name="sex" checked id="female")
+                                                    label(for="female") Маму
+                                                .col-xs-6.usual-radio-block
+                                                    input(type="radio" value="male" name="sex" id="male")
+                                                    label(for="male") Папу
+
+                                    .col-xs-12.col-sm-6
+                                        .form-group.common-form-group
+                                            label Описание
+                                            .input-wrapper.input-wrapper-fluid
+                                                input.padded(type="text" placeholder="Введите описание")
+
+                                    .col-xs-12.col-sm-6
+                                        .form-group.common-form-group
+                                            label Знак зодиака
+                                            .input-wrapper.input-wrapper-fluid
+                                                input.padded(type="text" placeholder="Введите знак зодиака")
+                        .box-footer
+                            button.pink-button Сохранить
+
+
+
+    script.
+        console.log('runnnign scripts')
+        $(function(){$('.navbar-default').removeClass('shadow')});
+
+

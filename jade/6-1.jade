@@ -1,0 +1,49 @@
+extends ./index.jade
+
+block content
+    .subhead
+
+    .content-wrapper
+        .row
+            .col-md-12
+                .box
+                    .box-content.no-padding
+                        .journal
+                            a.journal-links-block
+                                .journal-links-block-decription
+                                    .journal-links-block-decription--title Мои фото
+                                    .journal-links-block-decription--text Мне 9 месяцев
+                                .journal-links-block-image
+                                    img(src="build/img/journal-img-ex.png")
+
+                            a.journal-links-block
+                                .journal-links-block-decription
+                                    .journal-links-block-decription--title Я родился
+                                    .journal-links-block-decription--text В этой строке отображается начало описания.
+                                .journal-links-block-image
+
+                            a.journal-links-block
+                                .journal-links-block-decription
+                                    .journal-links-block-decription--title Вот я и дома
+                                    .journal-links-block-decription--text В этой строке отображается начало описания.
+                                .journal-links-block-image
+
+                            a.journal-links-block
+                                .journal-links-block-decription
+                                    .journal-links-block-decription--title Мои крестины
+                                    .journal-links-block-decription--text В этой строке отображается начало описания.
+                                .journal-links-block-image
+
+                            a.journal-links-block
+                                .journal-links-block-decription
+                                    .journal-links-block-decription--title Мои яркие моменты
+                                    .journal-links-block-decription--text В этой строке отображается начало описания.
+                                .journal-links-block-image
+
+
+
+    script.
+        console.log('runnnign scripts')
+        $(function(){$('.navbar-default').removeClass('shadow')});
+
+

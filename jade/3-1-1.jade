@@ -1,0 +1,30 @@
+extends ./index.jade
+
+block content
+    .subhead
+        button.flat-btn.pull-right.subhead-button Добавить
+    .content-wrapper
+        .row
+            .col-md-12
+                .box.static
+                    .box-content.no-padding
+                        .album-gallery
+                            .album-gallery--item.album(style="background-image: url('/img/album-image-1.jpg')")
+                                .album--name Близнецы
+                            .album-gallery--item.album(style="background-image: url('/img/album-image-2.jpg')")
+                                .album--name Семейная фотосессия
+                            .album-gallery--item.album(style="background-image: url('/img/album-image-3.jpg')")
+                                .album--name С детьми на премьере фильма Дом
+                            .album-gallery--item.album(style="background-image: url('/img/album-image-4.jpg')")
+                                .album--name Семейная фотосессия
+                            .album-gallery--item.album(style="background-image: url('/img/album-image-5.jpg')")
+                                .album--name С детьми на премьере  фильма Дом
+
+
+
+
+    script.
+        console.log('runnnign scripts')
+        $(function(){$('.navbar-default').removeClass('shadow')});
+
+

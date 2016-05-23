@@ -1,0 +1,52 @@
+extends ./index.jade
+
+block content
+    .content-wrapper
+        .row
+            .col-md-12
+                .box.static
+                    .box-content
+                        .form-group.common-form-group
+                            .dropdown.box-dropdown
+                                a.box-dropdown__text#dLabel(data-target='#', href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                                    | Тематика сообщения
+                                    span.caret
+                                ul.box-dropdown__list.dropdown-menu(aria-labelledby='dLabel')
+                                    li: a(href="#") item 1
+                                    li: a(href="#") item 2
+                        .form-group.common-form-group
+                            .input-wrapper.input-wrapper-fluid
+                                input(type="text" placeholder="Текст сообщения").padded
+                                .ink
+
+                        .form-group.common-form-group.checkbox-row
+                            .custom-checkbox.box-checkbox
+                                input.checkbox#checkbox(type='checkbox', value='None', name='check', checked='')
+                                label(for='checkbox')
+                            p.upper-box-text.checkbox-row__text Указать местоположение
+
+                        .form-group.common-form-group.map-row
+                            .input-wrapper.input-wrapper-fluid
+                                input.padded(type="text" placeholder="Введите горд и улицу")
+                                .ink
+
+                        .box-map#googleMap
+
+                        .box-row
+                            .box-square-button
+                                .box-square-button__icon
+                                    img(src="/img/icon-camera.png")
+                                .box-square-button__text Прикрепить фото
+                            .box-square-button
+                                .box-square-button__icon
+                                    img(src="/img/icon-video.png")
+                                .box-square-button__text Прикрепить видео
+                            .box-square-button
+                                .box-square-button__icon
+                                    img(src="/img/icon-attach.png")
+                                .box-square-button__text Прикрепить файл
+
+
+                    .box-footer
+                        button.bordered-button Отправить
+

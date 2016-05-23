@@ -1,0 +1,50 @@
+.nav.sidenav
+    .sidenav-bg
+    .sidenav-content
+        ul.sidenav-menu
+            li.sidenav-menu__item-parent.active
+                a.sidenav-menu__item--active(href="#")
+                    img(src="/img/sidenav-edit-icon.png").sidenav-menuitem__icon
+                    span.sidenav-menu__itemtext Написать пост
+            li.sidenav-menu__item-parent#collapseListGroupHeading1
+                a.sidenav-menu__item(role='button', data-toggle='collapse', href='#collapseListGroup1', aria-expanded='false', aria-controls='collapseListGroup1')
+                    img(src="/img/sidenav-movie-icon.png").sidenav-menuitem__icon
+                    span.sidenav-menu__itemtext Лента
+                ul.sidenav_submenu#collapseListGroup1.collapse(role='tabpanel', aria-labelledby='collapseListGroupHeading1', aria-expanded='false', style='height: 0px;')
+                    li.sidenav_submenu__li
+                        a.sidenav_submenu__a.active(href="#")  Все
+                    li.sidenav_submenu__li
+                        a.sidenav_submenu__a(href="#") Популярные
+                    li.sidenav_submenu__li
+                        a.sidenav_submenu__a(href="#") Подписки
+            li.sidenav-menu__item-parent#videogroup
+                a.sidenav-menu__item(role='button', data-toggle='collapse', href='#videoGroup', aria-expanded='false', aria-controls='videoGroup')
+                    img(src="/img/sidenav-camera-icon.png").sidenav-menuitem__icon
+                    span.sidenav-menu__itemtext Фото / видео
+                ul.sidenav_submenu#videoGroup.collapse(role='tabpanel', aria-labelledby='videogroup', aria-expanded='false', style='height: 0px;')
+                    li.sidenav_submenu__li
+                        a.sidenav_submenu__a.active(href="#")  Фотографии
+                    li.sidenav_submenu__li
+                        a.sidenav_submenu__a(href="#") Видео
+            li.sidenav-menu__item-parent: a.sidenav-menu__item(href="#")
+                img(src="/img/sidenav-conf-icon.png").sidenav-menuitem__icon
+                span.sidenav-menu__itemtext Конференции
+            li.sidenav-menu__item-parent: a.sidenav-menu__item(href="#")
+                img(src="/img/sidenav-icon-carriage.png").sidenav-menuitem__icon
+                span.sidenav-menu__itemtext Учет дня ребенка
+            li.sidenav-menu__item-parent: a.sidenav-menu__item(href="#")
+                img(src="/img/sidenav-icon-journal.png").sidenav-menuitem__icon
+                span.sidenav-menu__itemtext Журнал
+            li.sidenav-menu__item-parent: a.sidenav-menu__item(href="#")
+                img(src="/img/sidenav-icon-coupons.png").sidenav-menuitem__icon
+                span.sidenav-menu__itemtext Купоны
+            li.sidenav-menu__item-parent: a.sidenav-menu__item(href="#")
+                img(src="/img/sidenav-icon-clothes.png").sidenav-menuitem__icon
+                span.sidenav-menu__itemtext Барахолка
+            li.sidenav-menu__item-parent: a.sidenav-menu__item(href="#")
+                img(src="/img/sidenav-icon-friend.png").sidenav-menuitem__icon
+                span.sidenav-menu__itemtext Пригласи друга
+
+            li.sidenav-menu__item-parent.bottom-menu__last: a.sidenav-menu__item(href="#")
+                img(src="/img/sidenav-exit-icon.png").sidenav-menuitem__icon
+                span.sidenav-menu__itemtext Выйти

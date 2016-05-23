@@ -1,0 +1,67 @@
+extends ./index.jade
+
+block content
+    .subhead
+        button.flat-btn.pull-left.subhead-back-button Назад
+        button.flat-btn.pull-right.subhead-edit-button Редактировать
+
+    .content-wrapper
+        .row
+            .col-md-12
+                .box
+                    .box-content.no-padding
+                        .box-head
+                            .text Я родился
+                        .journal
+                            .journal-info-wrap
+                                .row
+                                    .col-xs-12.col-sm-6
+                                        .journal-info-block
+                                            .journal-info-block--icon
+                                                img(src="build/img/svg/alarm-icon.svg")
+
+                                            .journal-info-block--text Время: 22:27
+
+                                        .journal-info-block
+                                            .journal-info-block--icon
+                                                img(src="build/img/svg/city-icon.svg")
+
+                                            .journal-info-block--text Город: Киев
+
+                                        .journal-info-block
+                                            .journal-info-block--icon
+                                                img(src="build/img/svg/aries-icon.svg")
+
+                                            .journal-info-block--text Знак зодиака: овен
+
+                                    .col-xs-12.col-sm-6
+                                        .journal-info-block
+                                            .journal-info-block--icon
+                                                img(src="build/img/svg/female-icon.svg")
+
+                                            .journal-info-block--text Я похож на: маму
+
+                                        .journal-info-block
+                                            .journal-info-block--icon
+                                                img(src="build/img/svg/weight-icon.svg")
+
+                                            .journal-info-block--text Мой вес: 3.54 кг
+
+                                        .journal-info-block
+                                            .journal-info-block--icon
+                                                img(src="build/img/svg/ruler-icon.svg")
+
+                                            .journal-info-block--text Мой рост: 57 см
+
+                                    .col-xs-12
+                                        .journal-info-block
+                                            .journal-info-block--icon
+                                                img(src="build/img/svg/info-icon.svg")
+
+                                            .journal-info-block--text Описание: несколько слов о эмоциях сопровождающих рождение ребенка.
+
+    script.
+        console.log('runnnign scripts')
+        $(function(){$('.navbar-default').removeClass('shadow')});
+
+

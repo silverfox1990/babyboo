@@ -1,0 +1,86 @@
+$sidenav-bg-color: #312429
+
+
+.nav.sidenav
+  position: fixed
+  top: 80px
+  height: calc(100% - 80px)
+  left: 0
+  width: $sidenav-width
+  transition: all .8s ease
+  z-index: 2
+
+.sidenav-content
+  position: absolute
+  overflow: hidden
+  width: 100%
+  height: 100%
+  min-height: 100%
+  background: rgba($sidenav-bg-color, 0.97)
+.sidenav-bg
+  background-color: $sidenav-bg-color
+  background-image: url('/img/sidenav-bg.png')
+  background-size: cover
+  width: 100%
+  height: 100%
+  opacity: 0.96
+  position: absolute
+  z-index: 0
+
+.sidenav-menu
+  padding: 12px 0 0 0
+  height: 100%
+  overflow-y: scroll
+  width: 310px
+  &__item-parent
+    min-height: 70px
+    line-height: 70px
+    padding-left: 33px
+
+    &.active
+      border-left: 4px solid $pink
+
+  &__item
+    color: white
+    font-size: 18px
+    transition: all .07s ease
+    text-decoration: none
+
+    &:hover, &:active, &:focus
+      color: $text-pink
+      text-decoration: none
+
+    &--active
+      font-size: 18px
+      color: $text-pink
+
+
+.sidenav-menuitem
+  &__icon
+    margin-right: 20px
+
+
+.bottom-menu__last
+  margin-top: 70px
+
+//submenu
+
+.sidenav_submenu
+  padding-left: 44px
+  &__a
+    color: white
+    font-size: 15px
+    transition: all .007s ease
+    &:hover, &:focus
+      color: $text-pink
+      text-decoration: none
+    &:active
+      color: white
+    &.active
+      color: $text-pink
+    &:first-child
+      margin-top: 13px
+.sidenav_submenu__li
+  min-height: 52px
+  line-height: initial
+  padding-left: 5px

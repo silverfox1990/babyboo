@@ -1,0 +1,39 @@
+nav.navbar.navbar-default.navbar-fixed-top.shadow
+    .container-fluid
+        .navbar-header
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.main-logo(href='#')
+                img.head-brand-image(src="/img/main-logo.png")
+
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav.left-nav
+                form.head-search
+                    .form-group
+                        .input-group
+                            a(href="#").head-search-icon
+                                img(src="/img/search-icon.png")
+                            .input-wrapper
+                                input.form-control(type='text', placeholder='Поиск')
+                                .ink
+
+            ul.nav.navbar-nav.navbar-right.avatar-block
+                li.dropdown
+                    a(href='#')
+                        .head-avatar
+                            img(src="/img/head-avatar.jpg")
+                        img(src="/img/mom-icon.png")
+                        span.head-user-name Дженнифер Лопес
+                    ul.dropdown-menu
+                        li
+                            a(href='#') Action
+                        li
+                            a(href='#') Another action
+                        li
+                            a(href='#') Something else here
+                        li.divider(role='separator')
+                        li
+                            a(href='#') Separated link

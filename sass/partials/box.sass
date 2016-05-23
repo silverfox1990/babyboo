@@ -1,0 +1,433 @@
+.mb-xs-0
+  @media(max-width: 768px)
+    margin-bottom: 0
+
+.box
+  background-color: white
+  width: 100%
+  border: 1px solid #eaeaea
+  height: auto
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.04)
+
+  &.static
+    max-width: 874px
+.box-content
+  padding: 30px 30px 0 30px
+.box-footer
+  padding: 0
+  border-top: 1px solid #ece4e8
+  padding: 30px
+
+
+
+//checkbox row
+.checkbox-row
+  margin-bottom: 23px
+  &__text
+    padding-top: 4px
+.box-checkbox
+  float: left
+  margin-right: 20px
+.upper-box-text
+  font-size: 13px
+  text-transform: uppercase
+  font-weight: bold
+
+//map-row part
+.map-row
+  margin-bottom: 20px
+
+#googleMap
+  position relative
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100% !important
+    height: 100% !important
+
+
+
+//square btns row
+.box-row
+  margin-top: 20px
+  margin-bottom: 20px
+
+
+//google maps
+.box-map
+  width: 100%
+  background-color: #d398b5
+  position: relative
+  display: block
+  height: 0
+  padding: 0
+  overflow: hidden
+  padding-bottom: 32%
+
+.box-square-button
+  width: 136px
+  height: 136px
+  background: transparent
+  border: 1px solid #efefef
+  display: inline-block
+  margin: 10px 15px 10px 0
+  text-align: center
+  transition: all .06s ease
+  cursor: pointer
+
+
+  &:hover
+    border-color: #DCDCDC
+    .box-square-button__text
+      color: #a9a9af
+
+
+  &__icon
+    display: inline-block
+    margin-top: 50px
+
+  &__text
+    display: inline-block
+    color: #c8c8ce
+    margin: 10px 15px
+    transition: all .06s ease
+    font-size: 15px
+
+
+//2-1-1 Box posts
+.post
+
+  border-bottom: 1px solid #dadada
+  padding-bottom: 15px
+
+  &__headline
+    padding: 30px 28px
+    height: 80px
+
+    &--left
+      float: left
+      > *
+       vertical-align: middle
+
+    &--time
+      float: right
+      font-size: 15px
+      color: #aeaeb4
+      padding-top: 5px
+
+  &__author
+    color: $text-pink
+    font-size: 18px
+
+
+  &__avatar
+    display: inline-block
+    width: 42px
+    height: 42px
+    overflow: hidden
+    border-radius: 50%
+
+    &--active
+      box-shadow: 0 3px 7px rgba(0,196,64,0.7)
+
+    &--icon
+      display: inline-block
+
+    &--img
+      max-height: 100%
+      width: auto
+    &--iconimg
+      vertical-align: middle
+      margin-left: 10px
+      margin-right: 10px
+
+  &__reply-icon
+    margin-right: 6px
+
+  &__text
+    padding: 16px 30px
+    font-size: 18px
+    color: #221f20
+
+    &--link
+      color: $text-pink
+      &:hover
+        color: lighten($text-pink, 10)
+
+  &__content
+    display: flex
+    align-items: flex-start
+
+  &__media
+    display: flex
+
+    padding: 10px 30px 15px
+
+
+  &__footer
+    +clearfix
+    &--left
+      float: left
+      padding-left: 13px
+    &--right
+      float: right
+      padding-right: 28px
+
+
+//Post image gallery
+.post__gallery
+  display: flex
+  flex-direction: row
+
+  &--col
+    flex-direction: column
+
+  img
+    margin: 0 0 4px 10px
+
+
+
+.write-post
+  height: 72px
+  background-color: #f7f7f7
+  border-bottom: 1px solid #dadada
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 0 30px
+
+  &--text
+    display: flex
+    font-size: 16px
+    font-weight: 600
+    color: #333333
+    text-transform: uppercase
+
+  &--btn
+    display: flex
+    border-radius: 20px
+    font-size: 17px
+    font-weight: 500
+    padding: 5px 22px
+    .button--icon
+      background-image: url('/img/icon-comment-white.png')
+    .button-text
+      margin-top: 3px
+
+
+
+//Badges (CHIPS)
+
+.badge
+  display: inline-block
+  background-color: #efefef
+  color: #aeaeb4
+  font-size: 18px
+  font-weight: 400
+  height: 40px
+  line-height: 40px
+  padding: 0 18px
+  border-radius: 20px
+  margin: 10px 16px 13px
+  text-align: center
+
+  &__text
+    padding: 0 8px
+  &__icon
+    width: 33px
+    height: 33px
+    display: inline-block
+    background-repeat: no-repeat
+    background-position: center
+    vertical-align: middle
+
+  &__comment-icon
+    background-image: url('/img/badge-comment.png')
+  &__smile1-icon
+    background-image: url('/img/badge-smile1.png')
+  &__smile2-icon
+    background-image: url('/img/badge-smile2.png')
+  &__dots-icon
+    background-image: url('/img/badge-dots.png')
+
+
+.album-gallery
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  margin: auto
+  justify-content: flex-start
+  &--item
+    width: 270px
+    height: 270px
+    background-size: cover
+    background-repeat: no-repeat
+    margin: 10px
+    @media(max-width: 720px)
+      width: 100%
+
+.album
+  position: relative
+  cursor: pointer
+  transition: all .2s ease-in-out
+  &:hover
+    opacity: 0.92
+  &--name
+    position: absolute
+    color: white
+    font-size: 18px
+    bottom: 0
+    padding: 10px 20px
+    height: 50%
+    display: flex
+    align-items: flex-end
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.7) 100%)
+    width: 100%
+    @media(max-width: 720px)
+      font-size: 18px
+
+//gournal page
+
+.journal-links-block
+  min-height: 96px
+  padding: 15px
+  box-sizing: border-box
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-between
+  border-bottom: solid 1px #ece4e8
+
+  &:last-child
+    border-bottom 0
+
+.journal-links-block-decription
+  font-family: 'San francisko',sans-serif
+  font-weight: 400
+  padding: 5px 8px 0
+  min-width: 300px
+
+  &--title
+    color: #e7669b
+    font-size: 18px
+    margin-bottom: 9px
+
+  &--text
+    color: #aeaeb4
+    font-size: 15px
+
+.journal-links-block-image
+  padding-left: 8px
+
+  img
+    width: 66px
+    height: 66px
+
+    @media(max-width: 550px)
+      margin-top 12px
+
+a.journal-links-block
+  background: #FFF
+  &:hover
+    background: #f88bb8
+
+.box-head
+  background: rgba(239,239,239,0.5)
+  min-height: 70px
+  box-sizing: border-box
+  padding: 30px 30px 26px
+
+  .text
+    color: #333
+    font-family: 'San francisko',sans-serif
+    font-size: 12px
+    font-weight: 700
+    line-height: 13px
+    text-transform: uppercase
+
+.journal-info-block
+  margin-bottom: 25px
+  font-family: 'San francisko',sans-serif
+  display: flex
+
+  &--icon
+    display: inline-block
+    vertical-align: middle
+    height: 32px
+    width: 32px
+    text-align: left
+
+    img
+      display: block
+
+  &--text
+    display: inline-block
+    vertical-align: middle
+    color: black
+    font-size: 18px
+    font-weight: 400
+    margin-left: 23px
+
+    @media(max-width: 420px)
+      margin-left: 10px
+
+.journal-info-wrap
+  padding: 25px 25px 0
+
+  @media(max-width: 420px)
+    padding: 25px 10px 0
+
+.file-upload
+  position: relative
+  overflow: hidden
+  font-size: 1em
+  height: 2em
+  line-height: 2em
+
+.file_upload > button
+  float: right
+  width: 8em
+  height: 100%
+
+  @media(max-width: 500px)
+    width: 100%
+
+.file_upload > div
+  padding-left: 1em
+
+  @media(max-width: 500px)
+    display: none
+
+.journal-info-edit-wrap
+  padding: 25px 25px 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

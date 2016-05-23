@@ -1,0 +1,19 @@
+@mixin placeholder($color)
+  &::-webkit-input-placeholder
+    color: $color
+  &:-moz-placeholder
+    color: $color
+  &::-moz-placeholder //for newer versions of Firefox
+    color: $color
+  &:-ms-input-placeholder
+    color: $color
+
+
+=clearfix()
+  &:before,
+  &:after
+    content: ""
+    display: table
+  &:after
+    clear: both
+
