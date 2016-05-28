@@ -410,6 +410,59 @@ body {
   width: 100%;
   background-color: white;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.05); }
+  .subhead .nav-tabs {
+    margin-right: 30px;
+    border: 0; }
+    .subhead .nav-tabs ul {
+      margin: 0;
+      padding: 0; }
+  .subhead .nav-tabs > li {
+    border: 0;
+    padding: 0 10px; }
+  .subhead .nav-tabs > li > a {
+    border: 0;
+    border-bottom: solid 3px #fff;
+    color: #f5c2d7;
+    font-family: 'San francisko',sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0;
+    line-height: 50px;
+    height: 50px;
+    background-color: #FFF; }
+  .subhead .nav-tabs > li > a:focus,
+  .subhead .nav-tabs > li > a:hover {
+    border: 0;
+    border-bottom: solid 3px rgba(204, 102, 152, 0.8);
+    color: #e7669b;
+    background-color: #FFF; }
+  .subhead .nav-tabs > li.active > a,
+  .subhead .nav-tabs > li.active > a:focus,
+  .subhead .nav-tabs > li.active > a:hover {
+    border: 0;
+    border-bottom: solid 3px rgba(204, 102, 152, 0.8);
+    color: #e7669b;
+    background-color: #FFF; }
+  .subhead .filter-name {
+    font-size: 15px;
+    color: #333;
+    font-family: 'San francisko',sans-serif;
+    font-weight: 400;
+    background: url(/img/svg/icon_filter_normal.svg) no-repeat;
+    background-position: center left;
+    line-height: 50px;
+    padding-left: 38px;
+    margin-left: 30px; }
+  .subhead .subhead-back-button {
+    background: url(/img/back-icon.png) no-repeat;
+    padding-left: 30px; }
+    .subhead .subhead-back-button:hover {
+      background: url(/img/back-icon-hover.png) no-repeat; }
+  .subhead .subhead-edit-button {
+    background: url(/img/edit-icon.png) no-repeat;
+    padding-left: 40px; }
+    .subhead .subhead-edit-button:hover {
+      background: url(/img/edit-icon-hover.png) no-repeat; }
 
 @font-face {
   font-family: 'San francisko';
@@ -740,19 +793,20 @@ body {
     .box-dropdown__list > li > a {
       padding: 11px 20px; }
 
-.usual-radio-block input[type=radio] {
+.usual-radio-block input[type='radio'] {
   display: none; }
 
-.usual-radio-block input[type=radio] + label {
-  color: #221f20;
+.usual-radio-block input[type='radio'] + label {
+  color: #c8c8ce;
   font-family: 'San francisko',sans-serif;
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   padding-left: 23px;
-  line-height: 13px; }
+  line-height: 13px;
+  cursor: pointer; }
 
-.usual-radio-block input[type=radio] + label:before {
+.usual-radio-block input[type='radio'] + label:before {
   content: "";
   border: 2px solid #d4d4d4;
   margin: 0 5px 0 0;
@@ -765,10 +819,49 @@ body {
   position: absolute;
   left: 13px; }
 
-.usual-radio-block input[type=radio]:checked + label:after {
+.usual-radio-block input[type='radio']:checked + label:before {
   background-color: #e7669b;
   box-shadow: 0 3px 5px rgba(231, 102, 155, 0.35);
   border: 0px solid #d4d4d4; }
+
+.usual-radio-block input[type='radio']:checked + label {
+  color: #221f20; }
+
+.file-upload-my {
+  position: relative;
+  overflow: hidden;
+  width: 175px;
+  height: 30px;
+  background: url("/img/icon-camera.png") no-repeat;
+  border-radius: 3px;
+  text-align: center;
+  color: #c8c8ce;
+  font-family: 'San francisko',sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 28px; }
+
+.file-upload-my:hover {
+  background: url("/img/icon-camera-hover.png") no-repeat;
+  color: #221f20; }
+
+.file-upload-my input[type="file"] {
+  display: none; }
+
+.file-upload-my label {
+  /* Растягиваем label на всю возможную площадь блока .file-upload-my */
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer; }
+
+.file-upload-my span {
+  padding-left: 50px;
+  line-height: 28px; }
 
 .bordered-button {
   background-color: transparent;
@@ -1147,7 +1240,8 @@ a.journal-links-block {
     color: black;
     font-size: 18px;
     font-weight: 400;
-    margin-left: 23px; }
+    margin-left: 23px;
+    padding-top: 4px; }
     @media (max-width: 420px) {
       .journal-info-block--text {
         margin-left: 10px; } }
@@ -1222,3 +1316,82 @@ a.journal-links-block {
   .like-block.active {
     background: center url(/img/svg/like-active.svg) no-repeat;
     background-color: #e7669b; }
+
+.fleaMarket {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05); }
+
+.fleaMarket-block {
+  padding: 0;
+  min-height: 350px; }
+  .fleaMarket-block--head {
+    min-height: 70px;
+    background: rgba(239, 239, 239, 0.5);
+    padding: 0 30px;
+    color: #333;
+    font-family: 'San francisko',sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30px; }
+  .fleaMarket-block:nth-child(2n) {
+    border-left: solid 1px #ece4e8; }
+    @media (max-width: 768px) {
+      .fleaMarket-block:nth-child(2n) {
+        border-left: 0;
+        border-top: solid 1px #ece4e8; } }
+  .fleaMarket-block--body .item {
+    height: 280px; }
+  .fleaMarket-block--body .item-slider {
+    height: 280px; }
+    .fleaMarket-block--body .item-slider .carousel-control.right,
+    .fleaMarket-block--body .item-slider .carousel-control.left {
+      background-image: none; }
+    .fleaMarket-block--body .item-slider .glyphicon-chevron-left {
+      background: center url("/img/back-icon.png") no-repeat; }
+    .fleaMarket-block--body .item-slider .carousel-control.right {
+      background: center url("/img/right-arrow-icon.png") no-repeat; }
+    .fleaMarket-block--body .item-slider .glyphicon-chevron-right:before,
+    .fleaMarket-block--body .item-slider .glyphicon-chevron-left:before {
+      content: ''; }
+    .fleaMarket-block--body .item-slider .item-image-wrap {
+      display: table;
+      height: 100%;
+      width: 100%; }
+      .fleaMarket-block--body .item-slider .item-image-wrap .item-image-content {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center; }
+  .fleaMarket-block--body .sail-block {
+    padding: 30px; }
+    .fleaMarket-block--body .sail-block .av-block {
+      display: inline-block;
+      margin-right: 5px; }
+    .fleaMarket-block--body .sail-block .name {
+      color: #e7669b;
+      font-family: 'San francisko',sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      display: inline-block;
+      vertical-align: middle;
+      padding-left: 15px; }
+  .fleaMarket-block--body .write-block {
+    padding: 0 30px 30px; }
+    .fleaMarket-block--body .write-block .pink-button {
+      padding-left: 0;
+      padding-right: 0;
+      width: 220px; }
+  .fleaMarket-block--body .item-text {
+    padding: 0 30px; }
+    .fleaMarket-block--body .item-text p {
+      color: #221f20;
+      font-family: 'San francisko',sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 26px;
+      margin: 0 0 30px; }
