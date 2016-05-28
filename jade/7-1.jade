@@ -1,0 +1,54 @@
+extends ./index.jade
+
+block content
+    .subhead
+        .pull-left Фильтр
+        .pull-right Все Избранные
+            ul(class='nav.nav-tabs' role='tablist')
+                li(role="presentation" class="active")
+                    a(href='#home' aria-controls='home' role='tab' data-toggle='tab') 121
+                li(role="presentation")
+                    a(href='#profile' aria-controls='profile' role='tab' data-toggle='tab') Избранные
+
+    .content-wrapper
+        .row
+            .tab-content
+                div(role="tabpanel" class="tab-pane active" id="home")
+                    .coupon-wrap
+                        .col-sm-6.col-xs-12
+                            .coupon-block
+                                .coupon-head
+                                    .title Декоративная восметика в Eva
+                                    .like-block
+                                .coupon-body
+                                    img(src="img/coupon-1.png", alt="")
+                        .col-sm-6.col-xs-12
+                            .coupon-block
+                                .coupon-head
+                                    .title Декоративная восметика в Eva
+                                    .like-block.active
+                                .coupon-body
+                                    img(src="img/coupon-1.png", alt="")
+                div(role="tabpanel" class="tab-pane" id="profile")
+                    .coupon-wrap
+                        .col-sm-6.col-xs-12
+                            .coupon-block
+                                .coupon-head
+                                    .title Декоративная восметика в Eva
+                                    .like-block
+                                .coupon-body
+                                    img(src="img/coupon-1.png", alt="")
+                        .col-sm-6.col-xs-12
+                            .coupon-block
+                                .coupon-head
+                                    .title Декоративная восметика в Eva
+                                    .like-block.active
+                                .coupon-body
+                                    img(src="img/coupon-1.png", alt="")
+
+
+    script.
+        console.log('runnnign scripts')
+        $(function(){$('.navbar-default').removeClass('shadow')});
+
+

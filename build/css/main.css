@@ -655,7 +655,7 @@ body {
     line-height: 13px;
     text-transform: uppercase; }
   .common-form-group label + .input-wrapper {
-    margin-top: 13px; }
+    margin-top: 25px; }
 
 .custom-checkbox {
   width: 24px;
@@ -835,6 +835,10 @@ body {
   .subhead-button .button-icon {
     display: inline-block;
     background-position: center; }
+
+@media (max-width: 768px) {
+  .mb-xs-0 {
+    margin-bottom: 0; } }
 
 .box {
   background-color: white;
@@ -1177,3 +1181,44 @@ a.journal-links-block {
 
 .journal-info-edit-wrap {
   padding: 25px 25px 0; }
+
+.coupon-block {
+  background: #FFF;
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(98, 98, 98, 0.6);
+  overflow: hidden;
+  margin-bottom: 30px; }
+  .coupon-block img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto; }
+
+.coupon-body {
+  text-align: center; }
+
+.coupon-head {
+  display: flex;
+  background-color: whitesmoke;
+  min-height: 48px;
+  color: black;
+  font-family: 'San francisko',sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 9px 11px 0 17px;
+  flex-direction: row;
+  justify-content: space-between; }
+  .coupon-head .title {
+    padding: 4px 0; }
+
+.like-block {
+  min-width: 52px;
+  height: 32px;
+  background: center url(/img/svg/like.svg) no-repeat;
+  background-color: white;
+  border-radius: 16px;
+  cursor: pointer;
+  margin-left: 10px; }
+  .like-block.active {
+    background: center url(/img/svg/like-active.svg) no-repeat;
+    background-color: #e7669b; }
