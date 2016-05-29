@@ -25,7 +25,11 @@ $(function () {
   $('.typeahead').typeahead({
     source: ['Amsterdam', 'Washington', 'Sydney', 'Beijing', 'Cairo']
   });
-  
+
+  $('.like-block').on('click', function(){
+    $(this).toggleClass('active');
+  });
+
 
   ///   1-1 page
   var $googleMap = document.querySelector('#googleMap');

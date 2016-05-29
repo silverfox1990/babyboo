@@ -1,0 +1,124 @@
+.modal.fade(tabindex='-1', role='dialog')#modalFleaMarket
+    .modal-dialog.photo-upload-dialog
+        .modal-content
+            .modal-header
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    include ..//../icons/ic_close.svg
+                h4.modal-title ФИЛЬТР
+            .modal-body
+                .modal-fleaMarket
+                    .row
+                        .col-xs-12.col-sm-4
+                            .form-group.common-form-group.mb-xs-0
+                                label По цене
+
+                        .col-xs-12.col-sm-8
+                            .form-group.common-form-group
+                                .row
+                                    .col-xs-4.col-xs-offset-4.usual-radio-block
+                                        input(type="radio" value="female" name="price" checked id="high")
+                                        label(for="female") Дороже
+                                    .col-xs-4.usual-radio-block
+                                        input(type="radio" value="male" name="price" id="low")
+                                        label(for="male") дешевле
+                    .row
+                        .col-xs-12.col-sm-4
+                            .form-group.common-form-group.mb-xs-0
+                                label Пол
+
+                        .col-xs-12.col-sm-8
+                            .form-group.common-form-group
+                                .row
+                                    .col-xs-4.usual-radio-block
+                                        input(type="radio" value="female" name="sex" checked id="all")
+                                        label(for="all") Все
+                                    .col-xs-4.usual-radio-block
+                                        input(type="radio" value="male" name="sex" id="male")
+                                        label(for="male") Мальчик
+                                    .col-xs-4.usual-radio-block
+                                        input(type="radio" value="male" name="sex" id="male")
+                                        label(for="male") Девочка
+                    .row
+                        .col-xs-12.col-sm-4
+                            .form-group.common-form-group.mb-xs-0
+                                label Возраст
+
+                        .col-xs-12.col-sm-8
+                            .form-group.common-form-group
+                                .row
+                                    .col-xs-4.usual-radio-block
+                                        input(type="radio" value="female" name="age" checked id="fr")
+                                        label(for="fr") 0-12 мес.
+                                    .col-xs-4.usual-radio-block
+                                        input(type="radio" value="male" name="age" id="sd")
+                                        label(for="sd") 1-3 года
+                                    .col-xs-4.usual-radio-block
+                                        input(type="radio" value="male" name="age" id="th")
+                                        label(for="th") от 3 лет
+
+                    .row
+                        .col-xs-12
+                            .form-group.common-form-group
+                                label Размер
+
+                        .col-xs-12.col-sm-6
+                            .form-group.common-form-group
+                                .input-wrapper.input-wrapper-fluid
+                                    input.padded(type="text" placeholder="Максимальная размер")
+                        .col-xs-12.col-sm-6
+                            .form-group.common-form-group
+                                .input-wrapper.input-wrapper-fluid
+                                    input.padded(type="text" placeholder="Минимальная размер")
+
+                    .modal-fleaMarket-head Категории товаров
+                    .modal-search
+                        form.head-search
+                            .form-group
+                                .input-group
+                                    a(href="#").head-search-icon
+                                        img(src="/img/search-icon.png")
+                                    .input-wrapper
+                                        input.form-control(type='text', placeholder='Поиск')
+                                        .ink
+
+                    .row
+                        .col-xs-12.col-sm-6
+                            .form-group.common-form-group.checkbox-row
+                                .custom-checkbox.box-checkbox
+                                    input.checkbox#checkbox(type='checkbox', value='None', name='check', checked='')
+                                    label(for='checkbox')
+                                p.upper-box-text.checkbox-row__text Детское питание
+                        .col-xs-12.col-sm-6
+                            .form-group.common-form-group.checkbox-row
+                                .custom-checkbox.box-checkbox
+                                    input.checkbox#checkbox(type='checkbox', value='None', name='check', checked='')
+                                    label(for='checkbox')
+                                p.upper-box-text.checkbox-row__text Для кормления
+                        .col-xs-12.col-sm-6
+                            .form-group.common-form-group.checkbox-row
+                                .custom-checkbox.box-checkbox
+                                    input.checkbox#checkbox(type='checkbox', value='None', name='check')
+                                    label(for='checkbox')
+                                p.upper-box-text.checkbox-row__text Футболки
+                        .col-xs-12.col-sm-6
+                            .form-group.common-form-group.checkbox-row
+                                .custom-checkbox.box-checkbox
+                                    input.checkbox#checkbox(type='checkbox', value='None', name='check')
+                                    label(for='checkbox')
+                                p.upper-box-text.checkbox-row__text Куртки
+
+                        .col-xs-12.col-sm-6
+                            .form-group.common-form-group.checkbox-row
+                                .custom-checkbox.box-checkbox
+                                    input.checkbox#checkbox(type='checkbox', value='None', name='check')
+                                    label(for='checkbox')
+                                p.upper-box-text.checkbox-row__text Штаны
+
+                        .col-xs-12.col-sm-6
+                            .form-group.common-form-group.checkbox-row
+                                .custom-checkbox.box-checkbox
+                                    input.checkbox#checkbox(type='checkbox', value='None', name='check')
+                                    label(for='checkbox')
+                                p.upper-box-text.checkbox-row__text Спортивные костюмы
+            .modal-footer
+                button.btn.pink-button.modal-footer--btn(type='button') Применить

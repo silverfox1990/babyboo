@@ -9,10 +9,19 @@
   height auto
   box-shadow 0 0 7px rgba(0, 0, 0, 0.04)
 
+  &.gray
+    background-color #f4f4f4
+
+  &.no-shadow
+    box-shadow 0 0 7px rgba(0, 0, 0, 0)
+    border 0
+
   &.static
     max-width 874px
+
 .box-content
   padding 30px 30px 0 30px
+
 .box-footer
   border-top 1px solid #ece4e8
   padding 30px
@@ -70,6 +79,28 @@
   text-align center
   transition all .06s ease
   cursor pointer
+  vertical-align top
+
+  &.with-image
+    cursor default
+
+    &:hover
+      border 1px solid #efefef
+      .box-square-button__text
+        color #a9a9af
+
+  .box-square-button-with-image
+    display table
+    width 100%
+    height 100%
+
+    .image
+      text-align center
+      vertical-align middle
+      display table-cell
+
+      img
+        max-width 100%
 
 
   &:hover
@@ -332,6 +363,8 @@ a.journal-links-block
   min-height 70px
   box-sizing border-box
   padding 30px 30px 26px
+  border-bottom 1px solid rgba(0, 0, 0, 0.04)
+  border-top 1px solid rgba(0, 0, 0, 0.04)
 
   .text
     color #333
@@ -439,13 +472,16 @@ a.journal-links-block
   margin-left 10px
 
   &.active
+  &:hover
+  &:active
     background center url(/img/svg/like-active.svg) no-repeat
     background-color #e7669b
 
 .fleaMarket
-  background-color white;
-  border 1px solid rgba(0, 0, 0, 0.04);
-  box-shadow 0 0 5px rgba(0, 0, 0, 0.05);
+  background-color white
+  border 1px solid rgba(0, 0, 0, 0.04)
+  box-shadow 0 0 5px rgba(0, 0, 0, 0.05)
+  margin-bottom 30px
 
 .fleaMarket-block
   padding 0
@@ -455,16 +491,17 @@ a.journal-links-block
     min-height 70px
     background rgba(239, 239, 239, 0.5)
     padding 0 30px
-    color #333;
+    color #333
     font-family 'San francisko',sans-serif
-    font-size 13px;
-    font-weight 700;
-    text-transform uppercase;
+    font-size 13px
+    font-weight 700
+    text-transform uppercase
     display flex
     flex-direction row
     justify-content space-between
     align-items center
     padding-right 30px
+    border-bottom 1px solid rgba(0, 0, 0, 0.04)
 
   &:nth-child(2n)
     border-left solid 1px #ece4e8
@@ -487,10 +524,10 @@ a.journal-links-block
       .glyphicon-chevron-left
         background center url('/img/back-icon.png')no-repeat
 
-      .carousel-control.right,
+      .glyphicon-chevron-right
         background center url('/img/right-arrow-icon.png') no-repeat
 
-      .glyphicon-chevron-right,
+      .glyphicon-chevron-right
       .glyphicon-chevron-left
         &:before
           content ''
@@ -505,12 +542,21 @@ a.journal-links-block
           vertical-align middle
           text-align center
 
+          img
+            max-width 100%
+
     .sail-block
       padding 30px
+      display flex
+      align-items center
 
       .av-block
         display inline-block
         margin-right 5px
+
+      .mom-icon-block
+        max-height 42px
+        min-width 16px
 
       .name
         color #e7669b
@@ -525,9 +571,11 @@ a.journal-links-block
       padding 0 30px 30px
 
       .pink-button
-        padding-left 0
-        padding-right 0
-        width 220px
+      .bordered-button
+        padding-left 10px
+        padding-right 10px
+        max-width 220px
+        width 100%
 
     .item-text
       padding 0 30px
@@ -539,3 +587,21 @@ a.journal-links-block
         line-height 26px
         margin 0 0 30px
 
+.sail-item
+  .box-row
+    margin-top 0
+    margin-bottom 30px
+
+    .box-square-button
+      margin-top 0
+
+  .checkbox-row
+    margin-bottom 30px
+
+.input-w-select
+  .form-group
+    input
+      margin-top 11px
+
+    @media(max-width: 768px)
+      margin-top 0
