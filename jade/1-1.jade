@@ -4,8 +4,13 @@ block content
     .content-wrapper
         .row
             .col-md-12
-                .box.static
+                .box
                     .box-content
+                        .form-group.common-form-group
+                            .input-wrapper.input-wrapper-fluid
+                                input(type="text" placeholder="Тематика сообщения").padded.typeahead
+                                .ink
+
                         .form-group.common-form-group
                             .dropdown.box-dropdown
                                 a.box-dropdown__text#dLabel(data-target='#', href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
@@ -14,6 +19,7 @@ block content
                                 ul.box-dropdown__list.dropdown-menu(aria-labelledby='dLabel')
                                     li: a(href="#") item 1
                                     li: a(href="#") item 2
+
                         .form-group.common-form-group
                             .input-wrapper.input-wrapper-fluid
                                 input(type="text" placeholder="Текст сообщения").padded
@@ -33,7 +39,7 @@ block content
                         .box-map#googleMap
 
                         .box-row
-                            .box-square-button
+                            .box-square-button(data-toggle="modal" data-target="#myModal")
                                 .box-square-button__icon
                                     img(src="/img/icon-camera.png")
                                 .box-square-button__text Прикрепить фото
@@ -50,3 +56,6 @@ block content
                     .box-footer
                         button.bordered-button Отправить
 
+
+
+        include  ./partials/modal-attach-photos.jade

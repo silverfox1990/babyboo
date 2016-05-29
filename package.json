@@ -17,6 +17,9 @@
     "gulp-sourcemaps": "^1.6.0"
   },
   "dependencies": {
-    "jquery": "^2.2.3"
+    "bootstrap": "^3.3.6",
+    "bootstrap-3-typeahead": "^4.0.1",
+    "jquery": "^2.2.4",
+    "select2": "^4.0.3"
   }
 }

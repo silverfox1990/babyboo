@@ -2,13 +2,10 @@ doctype html
 html(lang='en')
     head
         title Baby Boo
-        //-link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
-        link(href="css/bootstrap.min.css" rel="styleSheet")
+        link(href="css/vendor.css" rel="styleSheet")
         link(href="css/main.css" rel="styleSheet")
 
-        script(src="js/jquery.min.js")
-        script(src="js/bootstrap.min.js")
-        script(src="js/scripts.js")
+        script(src="js/bundle.js")
         script(src="http://maps.googleapis.com/maps/api/js")
 
     body
@@ -19,14 +16,3 @@ html(lang='en')
         .main-wrapper
 
             block content
-
-        script.
-            function initialize() {
-                var mapProp = {
-                    center:new google.maps.LatLng(51.508742,-0.120850),
-                    zoom:5,
-            mapTypeId:google.maps.MapTypeId.ROADMAP
-            };
-            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-            }
-            google.maps.event.addDomListener(window, 'load', initialize);

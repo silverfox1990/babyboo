@@ -378,7 +378,7 @@ html, body {
 body {
   font-family: "Myriad Pro", Myriad, sans-serif;
   font-size: 16px;
-  background-color: white;
+  background-color: #f4f4f4;
   color: #4e5860;
   height: 100%; }
 
@@ -549,7 +549,7 @@ body {
   width: 100%;
   height: 100%;
   min-height: 100%;
-  background: rgba(49, 36, 41, 0.97); }
+  background: rgba(49, 36, 41, 0.95); }
 
 .sidenav-bg {
   background-color: #312429;
@@ -568,24 +568,53 @@ body {
   width: 310px; }
   .sidenav-menu__item-parent {
     min-height: 70px;
+    position: relative;
     line-height: 70px;
-    padding-left: 33px; }
+    padding-left: 33px;
+    border-left: 4px solid transparent; }
     .sidenav-menu__item-parent.active {
       border-left: 4px solid #cc6698; }
+      .sidenav-menu__item-parent.active .sidenav-menu__item {
+        color: #cc6698; }
+        .sidenav-menu__item-parent.active .sidenav-menu__item svg path, .sidenav-menu__item-parent.active .sidenav-menu__item svg rect, .sidenav-menu__item-parent.active .sidenav-menu__item svg polygon {
+          fill: #e7669b; }
   .sidenav-menu__item {
     color: white;
     font-size: 18px;
-    transition: all .07s ease;
+    transition: all .011s ease;
     text-decoration: none; }
     .sidenav-menu__item:hover, .sidenav-menu__item:active, .sidenav-menu__item:focus {
       color: #e7669b;
       text-decoration: none; }
+    .sidenav-menu__item:hover svg path, .sidenav-menu__item:hover svg rect, .sidenav-menu__item:hover svg polygon {
+      fill: #e7669b; }
     .sidenav-menu__item--active {
       font-size: 18px;
       color: #e7669b; }
+  .sidenav-menu__itembadge {
+    min-width: 40px;
+    height: 24px;
+    line-height: 20px;
+    top: 50%;
+    margin-top: -13px;
+    position: absolute;
+    right: 45px;
+    background-color: white;
+    color: #e7669b;
+    padding: 4px 12px;
+    border-radius: 12px; }
 
 .sidenav-menuitem__icon {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  display: inline-block;
   margin-right: 20px; }
+  .sidenav-menuitem__icon svg {
+    vertical-align: top; }
+    .sidenav-menuitem__icon svg path, .sidenav-menuitem__icon svg rect, .sidenav-menuitem__icon svg polygon {
+      transition: all .11s ease;
+      fill: white; }
 
 .bottom-menu__last {
   margin-top: 70px; }
@@ -596,7 +625,7 @@ body {
     color: white;
     font-size: 15px;
     transition: all .007s ease; }
-    .sidenav_submenu__a:hover, .sidenav_submenu__a:focus {
+    .sidenav_submenu__a:hover {
       color: #e7669b;
       text-decoration: none; }
     .sidenav_submenu__a:active {
@@ -605,6 +634,8 @@ body {
       color: #e7669b; }
     .sidenav_submenu__a:first-child {
       margin-top: 13px; }
+    .sidenav_submenu__a:focus {
+      color: #e7669b; }
 
 .sidenav_submenu__li {
   min-height: 52px;
@@ -773,8 +804,9 @@ body {
 .bordered-button {
   background-color: transparent;
   border: 2px solid #cc6698;
+  height: 40px;
   color: #cc6698;
-  padding: 8px 64px;
+  padding: 10px 64px 8px;
   text-transform: uppercase;
   border-radius: 20px;
   transition: all .03s ease;
@@ -784,12 +816,11 @@ body {
     background-color: #cc6698;
     color: white; }
   .bordered-button:active {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset; }
+    box-shadow: 0 1px 3px rgba(204, 102, 152, 0.1) inset; }
 
 .pink-button {
   background-color: #cc6698;
   border-radius: 20px;
-  transition: all .03s ease;
   font-size: 13px;
   font-weight: 700;
   color: white;
@@ -874,12 +905,14 @@ body {
 .map-row {
   margin-bottom: 20px; }
 
-#googleMap iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important; }
+#googleMap {
+  position: relative; }
+  #googleMap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important; }
 
 .box-row {
   margin-top: 20px;
@@ -911,7 +944,7 @@ body {
       color: #a9a9af; }
   .box-square-button__icon {
     display: inline-block;
-    margin-top: 50px; }
+    margin-top: 34px; }
   .box-square-button__text {
     display: inline-block;
     color: #c8c8ce;
@@ -1091,6 +1124,8 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   border-bottom: solid 1px #ece4e8; }
+  .journal-links-block:last-child {
+    border-bottom: 0; }
 
 .journal-links-block-decription {
   font-family: 'San francisko',sans-serif;
@@ -1110,6 +1145,9 @@ body {
   .journal-links-block-image img {
     width: 66px;
     height: 66px; }
+    @media (max-width: 550px) {
+      .journal-links-block-image img {
+        margin-top: 12px; } }
 
 a.journal-links-block {
   background: #FFF; }
@@ -1214,11 +1252,82 @@ a.journal-links-block {
 .like-block {
   min-width: 52px;
   height: 32px;
-  background: center url(/img/svg/like.svg) no-repeat;
+  background: center url("/img/svg/like.svg") no-repeat;
   background-color: white;
   border-radius: 16px;
   cursor: pointer;
   margin-left: 10px; }
   .like-block.active {
-    background: center url(/img/svg/like-active.svg) no-repeat;
+    background: center url("/img/svg/like-active.svg") no-repeat;
     background-color: #e7669b; }
+
+.modal-backdrop {
+  background-color: #fafafa; }
+  .modal-backdrop.in {
+    opacity: 0.91; }
+
+.modal {
+  text-align: center;
+  padding: 0 !important; }
+  .modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px; }
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle; }
+
+.modal-content {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 0; }
+
+.modal-header {
+  max-height: 70px;
+  background-color: #efefef;
+  border-bottom: 1px solid #ece4e8;
+  position: relative; }
+  .modal-header .close {
+    position: absolute;
+    right: -50px;
+    width: 36px;
+    height: 36px;
+    opacity: 1;
+    top: -50px; }
+    .modal-header .close svg {
+      transition: all .1s ease; }
+    .modal-header .close:hover svg path, .modal-header .close:hover svg rect, .modal-header .close:hover svg polygon {
+      fill: #ed89b2; }
+
+.modal-body {
+  padding: 0; }
+
+.modal-body-subheader {
+  color: #e7669b;
+  height: 70px;
+  line-height: 70px;
+  border-bottom: 1px solid #ece4e8;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700; }
+
+.modal-title {
+  color: #333;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 46px;
+  text-transform: uppercase; }
+
+.modal-footer {
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  .modal-footer--btn {
+    max-height: 40px; }
