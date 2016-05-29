@@ -70,7 +70,7 @@ gulp.task('serve', ['sass'], function () {
   });
 
   //gulp.watch('./sass/**/*.sass', ['sass']);
-  gulp.watch('./jade/**/*.styl', ['stylus']);
+  gulp.watch('./styl/**/*.styl', ['stylus']);
   gulp.watch('./jade/**/*.jade', ['jade']);
   gulp.watch('./javascript/**/*.js', ['js']);
   gulp.watch("build/**/*.*").on('change', browserSync.reload);
