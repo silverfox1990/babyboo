@@ -105,3 +105,47 @@
       transition all .1s ease
       max-width 100%
       height auto
+
+.modal-gallery-item
+  position relative
+
+.gallery-checkbox
+  width 40px
+  height 40px
+  position absolute
+  bottom 16px
+  right 16px
+  label
+    width 40px
+    height 40px
+    cursor pointer
+    position absolute
+    top 0
+    left 0
+    background transparent
+    border 2px solid #d4d4d4
+    border-radius 50%
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.35);
+    &:after
+      content ''
+      background-image url('/img/galery-checkbox-checked.png')
+      width 21px
+      height 21px
+      background-repeat no-repeat
+      position absolute
+      top 9px
+      left 7px
+      opacity 0
+    &:hover
+      border-color #b6b6b6
+    &:hover:after
+      opacity 0
+
+  .checkbox
+    visibility hidden
+    &:checked + label
+      background $pink
+      border-color $pink
+      box-shadow 0 1px 1px $pink
+    &:checked + label:after
+      opacity 1
