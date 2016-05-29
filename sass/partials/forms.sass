@@ -131,19 +131,20 @@
         padding: 11px 20px
 
 .usual-radio-block
-  input[type=radio]
+  input[type='radio']
     display: none
 
-  input[type=radio]+label
-    color: #221f20
+  input[type='radio']+label
+    color: #c8c8ce
     font-family: 'San francisko',sans-serif
     font-size: 13px
     font-weight: 700
     text-transform: uppercase
     padding-left: 23px
     line-height: 13px
+    cursor: pointer
 
-  input[type=radio]+label:before
+  input[type='radio']+label:before
     content: ""
     border: 2px solid #d4d4d4
     margin: 0 5px 0 0
@@ -156,7 +157,46 @@
     position: absolute
     left: 13px
 
-  input[type=radio]:checked+label:after
+  input[type='radio']:checked+label:before
     background-color: #e7669b
     box-shadow: 0 3px 5px rgba(231, 102, 155, 0.35)
     border: 0px solid #d4d4d4
+
+  input[type='radio']:checked+label
+    color: #221f20
+
+.file-upload-my
+  position: relative /* Даем возможность делать позиционирование, внутри данного элемента */
+  overflow: hidden /* Все что выходит за пределы - скрываем */
+  width: 175px /* Задаем ширину кнопки выбора файла */
+  height: 30px /* Задаем высоту кнопки выбора файла */
+  background: url('/img/icon-camera.png') no-repeat
+  border-radius: 3px
+  text-align: center
+  color: #c8c8ce
+  font-family: 'San francisko',sans-serif
+  font-size: 13px
+  font-weight: 700
+  text-transform: uppercase
+  margin-bottom: 28px
+
+.file-upload-my:hover
+  background: url('/img/icon-camera-hover.png') no-repeat
+  color: #221f20
+
+.file-upload-my input[type="file"]
+  display: none /* Обязательно скрываем настоящий Input File */
+
+.file-upload-my label
+  /* Растягиваем label на всю возможную площадь блока .file-upload-my */
+  display: block
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  cursor: pointer
+
+.file-upload-my span
+  padding-left: 50px
+  line-height: 28px

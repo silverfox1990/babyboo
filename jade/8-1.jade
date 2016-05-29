@@ -1,0 +1,77 @@
+extends ./index.jade
+
+block content
+    .subhead
+        .pull-left
+            .filter-name Фильтр
+        .pull-right
+            ul(class='nav nav-tabs' role='tablist')
+                li(role="presentation" class="active")
+                    a(href='#home' aria-controls='home' role='tab' data-toggle='tab') Все
+                li(role="presentation")
+                    a(href='#profile' aria-controls='profile' role='tab' data-toggle='tab') Избранные
+
+    .content-wrapper
+        .row
+            .tab-content
+                div(role="tabpanel" class="tab-pane active" id="home")
+                    .col-md-12
+                        .box
+                            .box-content.no-padding
+                                .clearfix
+                                    .fleaMarket
+                                        .col-sm-6.col-xs-12.fleaMarket-block
+                                            .fleaMarket-block--head
+                                                .text Футболка с рисунком. Размер: 74
+
+                                            .fleaMarket-block--body
+                                                .item-slider
+                                                    div(id="carousel-example-generic" class="carousel slide" data-ride="carousel")
+                                                        div(class="carousel-inner" role="listbox")
+                                                            .item.active
+                                                                .item-image-wrap
+                                                                    .item-image-content
+                                                                        img(src="/img/item-image.png", alt="")
+                                                            .item
+                                                                .item-image-wrap
+                                                                    .item-image-content
+                                                                        img(src="/img/item-image.png", alt="")
+
+                                                        a(class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev")
+                                                            span(class="glyphicon glyphicon-chevron-left" aria-hidden="true")
+                                                            span.sr-only Previous
+                                                        a(class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next")
+                                                            span(class="glyphicon glyphicon-chevron-right" aria-hidden="true")
+                                                            span.sr-only Next
+
+                                        .col-sm-6.col-xs-12.fleaMarket-block
+                                            .fleaMarket-block--head
+                                                .text Цена: 100 грн.
+                                                .like-block
+
+                                            .fleaMarket-block--body
+                                                .sail-block
+                                                    .av-block
+                                                        img(src="img/avatar-ex.png", alt="")
+                                                    img(src="img/mom-icon.png")
+                                                    .name Марина Кравец
+
+                                                .write-block
+                                                    button.pink-button Написать продавцу
+                                                .item-text
+                                                    p Здесь будет текст описания товара, состав, особенности. Здесь будет текст описания товара, состав, особенности.
+
+
+                div(role="tabpanel" class="tab-pane" id="profile")
+                    .col-md-12
+                        .box
+                            .box-content.no-padding
+                                .box-head
+                                    .text Я родился
+
+    script.
+        console.log('runnnign scripts')
+        $(function(){$('.navbar-default').removeClass('shadow')});
+
+
+

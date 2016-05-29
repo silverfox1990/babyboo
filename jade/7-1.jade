@@ -2,11 +2,12 @@ extends ./index.jade
 
 block content
     .subhead
-        .pull-left Фильтр
-        .pull-right Все Избранные
-            ul(class='nav.nav-tabs' role='tablist')
+        .pull-left
+            .filter-name Фильтр
+        .pull-right
+            ul(class='nav nav-tabs' role='tablist')
                 li(role="presentation" class="active")
-                    a(href='#home' aria-controls='home' role='tab' data-toggle='tab') 121
+                    a(href='#home' aria-controls='home' role='tab' data-toggle='tab') Все
                 li(role="presentation")
                     a(href='#profile' aria-controls='profile' role='tab' data-toggle='tab') Избранные
 
