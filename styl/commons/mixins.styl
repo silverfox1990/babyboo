@@ -1,0 +1,18 @@
+placeholder(color)
+  &::-webkit-input-placeholder
+    color color !important
+  &:-moz-placeholder  /* Firefox 18- */
+    color color !important
+  &::-moz-placeholder  /* Firefox 19+ */
+    color color !important
+  &:-ms-input-placeholder
+    color color !important
+
+clearfix()
+  zoom 1
+  &:after
+  &:before
+    content ""
+    display table
+  &:after
+    clear both

@@ -19,6 +19,7 @@
   "dependencies": {
     "bootstrap": "^3.3.6",
     "bootstrap-3-typeahead": "^4.0.1",
+    "gulp-stylus": "^2.4.0",
     "jquery": "^2.2.4",
     "select2": "^4.0.3"
   }

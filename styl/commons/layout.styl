@@ -1,0 +1,83 @@
+$sidenav-width = 294px
+$content-bg = #f4f4f4
+
+body
+  padding-top 80px
+
+.main-wrapper
+  margin-left $sidenav-width
+  background-color $content-bg
+  min-height 100%
+  transition all 0.5s linear
+
+.content-wrapper
+  padding 30px
+
+.subhead
+  height 50px
+  width 100%
+  background-color white
+  box-shadow 0 3px 4px rgba(0, 0, 0, 0.05)
+
+  .nav-tabs
+    margin-right 30px
+    border 0
+    ul
+      margin 0
+      padding 0
+
+  .nav-tabs>li
+    border 0
+    padding 0 10px
+
+  .nav-tabs>li>a
+    border 0
+    border-bottom solid 3px #fff
+    color #f5c2d7
+    font-family 'San francisko',sans-serif
+    font-size 15px
+    font-weight 400
+    padding 0
+    line-height 50px
+    height 50px
+    background-color #FFF
+
+  .nav-tabs>li>a:focus,
+  .nav-tabs>li>a:hover
+    border 0
+    border-bottom solid 3px rgba(204, 102, 152, 0.8)
+    color #e7669b
+    background-color #FFF
+
+  .nav-tabs>li.active>a,
+  .nav-tabs>li.active>a:focus,
+  .nav-tabs>li.active>a:hover,
+    border 0
+    border-bottom solid 3px rgba(204, 102, 152, 0.8)
+    color #e7669b
+    background-color #FFF
+
+  .filter-name
+    font-size 15px
+    color #333
+    font-family 'San francisko',sans-serif
+    font-weight 400
+    background url(/img/svg/icon_filter_normal.svg) no-repeat
+    background-position center left
+    line-height 50px
+    padding-left 38px
+    margin-left 30px
+
+  .subhead-back-button
+    background url(/img/back-icon.png) no-repeat
+    padding-left 30px
+
+    &:hover
+      background url(/img/back-icon-hover.png) no-repeat
+
+  .subhead-edit-button
+    background url(/img/edit-icon.png) no-repeat
+    padding-left 40px
+
+    &:hover
+      background url(/img/edit-icon-hover.png) no-repeat

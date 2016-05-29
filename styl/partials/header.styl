@@ -1,0 +1,79 @@
+.navbar
+  margin-bottom 0
+.navbar-default
+  height 80px
+  background-color white
+  &.shadow
+    box-shadow 0 3px 4px rgba(0,0,0,0.05)
+    border-bottom none
+
+.main-logo
+  position absolute
+  left 50%
+  margin-left -100px
+  height 100%
+.head-brand-image
+  position absolute
+  left 33px
+  top 7px
+
+.avatar-block
+  margin-right 20px
+.head-avatar
+  display inline-block
+  vertical-align middle
+  width 42px
+  height 42px
+  border-radius 50%
+  overflow hidden
+  margin-right 6px
+.head-user-name
+  color $text-pink
+  font-size 18px
+  margin-left 12px
+
+
+
+//search form
+.left-nav
+  margin-left 15px
+  margin-top 4px
+.head-search
+  margin-top 15px
+  .form-group
+    input
+      border none
+      border-bottom 1px solid #ccc
+      border-radius 0px
+      box-shadow none
+      color black
+      font-size 16px
+      @include placeholder(#ccc)
+
+
+.head-search-icon
+  display table-cell
+  vertical-align middle
+  padding-right 18px
+  padding-top 8px
+
+
+.navbar-header
+  height 78px
+
+.navbar-default
+  .navbar-toggle
+    margin-top 25px
+    border none
+    .icon-bar
+      height 3px
+      background-color $pink
+
+//collapsed navbar mobile
+.navbar-collapse
+  background-color white
+
+  &.in, &.collapsing //collapsed opened
+    .head-search
+      .input-group
+        margin auto
